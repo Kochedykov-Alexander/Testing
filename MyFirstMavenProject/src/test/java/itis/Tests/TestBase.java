@@ -1,29 +1,36 @@
 package itis.Tests;
 
+
 import itis.Models.AccountData;
-import itis.Models.MicroblogData;
 import itis.Models.PhotoAlbumData;
 import itis.ApplicationManager;
+import itis.Settings;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.jupiter.api.AfterAll;
+
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 
 
 public class TestBase {
 
-
-    AccountData accountData = new AccountData("Kochedykov00", "otumer58");
+    static Settings settings = new Settings();
+    static ApplicationManager applicationManager;
     PhotoAlbumData photoAlbumData = new PhotoAlbumData("MyPhotoTest");
-    ApplicationManager applicationManager;
+
 
 
     @Before
-    public void setUp() {
+    public void setUp() throws ParserConfigurationException, org.xml.sax.SAXException, IOException {
         applicationManager = ApplicationManager.getInstance();
+
     }
 
    @AfterAll
     public void tearDown() throws Throwable {
         applicationManager.finalize();
+
     }
 
     public static String generateRandomString(int n) {

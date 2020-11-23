@@ -1,14 +1,15 @@
 package itis.Handlers;
 
-import itis.Models.MicroblogData;
-import itis.Models.PhotoAlbumData;
-import org.xml.sax.Attributes;
-import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
 
-import java.util.ArrayList;
+        import itis.Models.PhotoAlbumData;
+        import org.xml.sax.Attributes;
+        import org.xml.sax.SAXException;
+        import org.xml.sax.helpers.DefaultHandler;
+
+        import java.util.ArrayList;
 
 public class XMLPhotoHandler extends DefaultHandler {
+
 
     public boolean isName, isDescription;
     private StringBuilder data;

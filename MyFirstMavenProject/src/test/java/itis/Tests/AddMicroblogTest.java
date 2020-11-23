@@ -10,7 +10,7 @@ import java.io.IOException;
 
 import static itis.Tests.AddMicroblogTestFromXml.MicroblogDataFromXmlFile;
 
-public class AddMicroblogTest extends TestBase {
+public class AddMicroblogTest extends AuthBase {
 
 
     @Test

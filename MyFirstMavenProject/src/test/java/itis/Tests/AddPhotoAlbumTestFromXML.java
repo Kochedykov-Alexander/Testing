@@ -12,7 +12,7 @@ import java.io.File;
 import java.io.IOException;
 
 
-public class AddPhotoAlbumTestFromXML extends TestBase {
+public class AddPhotoAlbumTestFromXML {
 
 
 

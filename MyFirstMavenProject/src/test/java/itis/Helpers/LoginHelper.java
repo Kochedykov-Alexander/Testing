@@ -6,15 +6,36 @@ import org.openqa.selenium.By;
 
 public class LoginHelper extends HelperBase {
 
+    NavigationHelper navigationHelper;
+
     public LoginHelper(ApplicationManager applicationManager) {
         super(applicationManager);
     }
 
     public void login(AccountData user) {
+
+//        if (isLoggedIn()) {
+//            if (isLoggedIn(user.getUsername()))
+//            {
+//                return;
+//            }
+//            navigationHelper.getLogout();
+//        }
+
         driver.findElement(By.id("contact_s")).click();
         driver.findElement(By.id("contact_s")).sendKeys(user.getUsername());
         driver.findElement(By.id("password_s")).click();
         driver.findElement(By.id("password_s")).sendKeys(user.getPassword());
         driver.findElement(By.id("mainSubmitForm")).click();
     }
+
+
+//    public boolean isLoggedIn() {
+//
+//    }
+//
+//    public boolean isLoggedIn(String username){
+//
+//    }
+
 }

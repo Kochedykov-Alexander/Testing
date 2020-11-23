@@ -8,6 +8,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,6 +19,7 @@ public class ApplicationManager {
     private String baseURL;
     private Map<String, Object> vars;
     private JavascriptExecutor js;
+    private static Settings settings = new Settings();
 
     private LoginHelper auth;
     private MicroblogHelper microblogHelper;
@@ -25,11 +28,11 @@ public class ApplicationManager {
 
     private static ThreadLocal<ApplicationManager> app = new ThreadLocal<ApplicationManager>();
 
-    private ApplicationManager() {
+    private ApplicationManager() throws ParserConfigurationException, org.xml.sax.SAXException, IOException {
         System.setProperty("webdriver.chrome.driver", "E:\\chromedriver.exe");
         driver = new ChromeDriver();
         js = (JavascriptExecutor) driver;
-        baseURL = "https://foiz.ru/";
+        baseURL = settings.getBaseURL();
         vars = new HashMap<String, Object>();
         auth = new LoginHelper(this);
         microblogHelper = new MicroblogHelper(this);
@@ -45,7 +48,7 @@ public class ApplicationManager {
 
 
 
-    public static ApplicationManager getInstance() {
+    public static ApplicationManager getInstance() throws ParserConfigurationException, org.xml.sax.SAXException, IOException  {
         if (app.get() == null) {
             ApplicationManager newInstance = new ApplicationManager();
             newInstance.navigationHelper.openLoginPage();

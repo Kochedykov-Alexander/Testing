@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.IOException;
 
 
-public class AddMicroblogTestFromXml extends TestBase {
+public class AddMicroblogTestFromXml {
 
 
 
@@ -26,12 +26,12 @@ public class AddMicroblogTestFromXml extends TestBase {
     {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
-        File file = new File("E:\\MyFirstMavenProject\\src\\test\\resources\\data.xml");
+        File file = new File("E:\\Testing\\MyFirstMavenProject\\src\\test\\resources\\data.xml");
         XMLHandler handler = new XMLHandler();
         parser.parse(file, handler);
         MicroblogData microblogData = handler.getUser();
 
-            System.out.println(String.format("Имя сотрудника: %s, его должность: %s", microblogData.getName(), microblogData.getDescription()));
+        System.out.println(String.format("Имя сотрудника: %s, его должность: %s", microblogData.getName(), microblogData.getDescription()));
 
 
         return microblogData;
