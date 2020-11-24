@@ -2,6 +2,7 @@ package itis.Helpers;
 
 import itis.Models.AccountData;
 import itis.ApplicationManager;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 
 public class LoginHelper extends HelperBase {
@@ -14,6 +15,8 @@ public class LoginHelper extends HelperBase {
     }
 
     public void login(AccountData user) {
+
+        String expectedUrl = "https://foiz.ru/?autorized&link_id=";
 
         if (isLoggedIn()) {
             if (isLoggedIn(user.getUsername()))
@@ -28,7 +31,10 @@ public class LoginHelper extends HelperBase {
             driver.findElement(By.id("password_s")).click();
             driver.findElement(By.id("password_s")).sendKeys(user.getPassword());
             driver.findElement(By.id("mainSubmitForm")).click();
-            flag = true;
+
+            if (driver.getCurrentUrl().length() > expectedUrl.length() && expectedUrl.equals(driver.getCurrentUrl().substring(0, expectedUrl.length()))) {
+                flag = true;
+            }
     }
 
 

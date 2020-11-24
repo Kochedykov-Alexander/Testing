@@ -13,14 +13,13 @@ public class LoginTests extends TestBase {
     @Test
     public void LoginWithInvalidData() throws ParserConfigurationException, org.xml.sax.SAXException, IOException {
         applicationManager.getNavigationHelper().getLogout();
-        AccountData accountData1 = new AccountData("ItisTest", "29032000");
+        AccountData accountData1 = new AccountData("ItisTeddffdfdst", "29032000");
         applicationManager.getNavigationHelper().openLoginPage();
         applicationManager.getAuth().login(accountData1);
     }
 
     @Test
     public void LoginWithValidData() throws ParserConfigurationException, org.xml.sax.SAXException, IOException {
-        applicationManager.getNavigationHelper().getLogout();
         AccountData accountData = new AccountData(settings.getLogin(), settings.getPassword());
         applicationManager.getNavigationHelper().openLoginPage();
         applicationManager.getAuth().login(accountData);

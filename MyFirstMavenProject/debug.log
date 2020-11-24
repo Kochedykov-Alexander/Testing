@@ -45,3 +45,7 @@
 [1124/031111.606:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
 [1124/033230.012:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
 [1124/033308.993:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\KOCHED~1\AppData\Local\Temp\scoped_dir16364_1429272518\Crashpad\attachments\43368499-7574-487c-943c-643e52ef2c44: Системе не удается найти указанный путь. (0x3)
+[1124/035218.690:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
+[1124/035247.910:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
+[1124/040502.000:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
+[1124/040709.496:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
