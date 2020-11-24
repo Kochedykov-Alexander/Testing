@@ -27,6 +27,7 @@ public class NavigationHelper extends HelperBase {
 
     public void getLogout() {
         driver.findElement(By.xpath("//*[@id=\"left_nav\"]/ul/div/ul/li[4]/a/span/span")).click();
+        flag = false;
     }
 
 

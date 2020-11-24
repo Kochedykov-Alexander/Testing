@@ -15,14 +15,10 @@ public class AuthBase extends TestBase{
     TestBase testBase = new TestBase();
 
 
-
-
-
     @Before
     public void setUp() throws ParserConfigurationException, org.xml.sax.SAXException, IOException {
         testBase.setUp();
         AccountData accountData = new AccountData(settings.getLogin(), settings.getPassword());
-        applicationManager.getNavigationHelper().openLoginPage();
         applicationManager.getAuth().login(accountData);
 
 

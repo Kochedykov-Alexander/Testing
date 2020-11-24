@@ -8,6 +8,6 @@ public class AddPhotoTest extends AuthBase{
     public void addPhotoTest() {
         applicationManager.getNavigationHelper().openPhotoPage();
         applicationManager.getPhotoAlbumHelper().addPhotoAlbum(photoAlbumData);
-        applicationManager.getNavigationHelper().getLogout();
+
     }
 }

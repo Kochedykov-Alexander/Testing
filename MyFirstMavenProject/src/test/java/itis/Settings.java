@@ -41,12 +41,12 @@ public class Settings {
     }
 
 
-        public String getBaseURL () throws ParserConfigurationException, org.xml.sax.SAXException, IOException {
-            SAXParser parser = factory.newSAXParser();
-            parser.parse(file, handler);
-            baseURL = handler.getUrl();
-            return baseURL;
-        }
+    public String getBaseURL () throws ParserConfigurationException, org.xml.sax.SAXException, IOException {
+        SAXParser parser = factory.newSAXParser();
+        parser.parse(file, handler);
+        baseURL = handler.getUrl();
+        return baseURL;
+    }
 
 
 }

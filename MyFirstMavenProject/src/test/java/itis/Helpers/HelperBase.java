@@ -7,6 +7,7 @@ public class HelperBase {
 
     protected WebDriver driver;
     protected ApplicationManager applicationManager;
+    static boolean flag = false;
 
     public HelperBase(ApplicationManager applicationManager) {
         this.applicationManager = applicationManager;

@@ -13,14 +13,9 @@ import java.io.IOException;
 public class AddMicroblogTestFromXml {
 
 
-
-
     public static void main(String [] args) throws ParserConfigurationException, org.xml.sax.SAXException, IOException  {
         MicroblogDataFromXmlFile();
     }
-
-
-    //Метод который вам нужен чтобы распарсить Xml
 
     public static MicroblogData MicroblogDataFromXmlFile() throws ParserConfigurationException, org.xml.sax.SAXException, IOException
     {
@@ -32,7 +27,6 @@ public class AddMicroblogTestFromXml {
         MicroblogData microblogData = handler.getUser();
 
         System.out.println(String.format("Имя сотрудника: %s, его должность: %s", microblogData.getName(), microblogData.getDescription()));
-
 
         return microblogData;
     }

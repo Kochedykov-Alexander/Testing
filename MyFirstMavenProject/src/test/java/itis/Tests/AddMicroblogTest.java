@@ -15,6 +15,7 @@ public class AddMicroblogTest extends AuthBase {
 
     @Test
     public void addMicroblog() throws IOException, ParserConfigurationException, org.xml.sax.SAXException{
+
         applicationManager.getNavigationHelper().openMicroblogPage();
         MicroblogData microblogData = MicroblogDataFromXmlFile();
         applicationManager.getMicroblogHelper().addMicroblog(microblogData);
